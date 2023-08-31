@@ -29,7 +29,12 @@ class Main extends Component {
   deleteTodoHandler = (index) => {
     const { todos } = this.state;
     const updatedTodos = todos.filter((_, i) => i !== index);
-    this.setState({ todos: updatedTodos });
+
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+
+    this.setState({
+      todos: updatedTodos,
+    });
   };
 
   componentDidMount() {
