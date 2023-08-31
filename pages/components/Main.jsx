@@ -38,7 +38,9 @@ class Main extends Component {
         <div>
           <h2>Things I have to do</h2>
           <div>
-            <ToDoItem />
+            {todos.map((todo, index) => (
+              <ToDoItem text={todo} />
+            ))}
           </div>
         </div>
       </div>

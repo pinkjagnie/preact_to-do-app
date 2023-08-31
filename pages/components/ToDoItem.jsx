@@ -1,9 +1,9 @@
 import { h } from "preact";
 
-const TodoItem = () => {
+const TodoItem = ({ text }) => {
   return (
     <div>
-      <span>single to do</span>
+      <span>{text}</span>
       <button>Delete</button>
     </div>
   );
