@@ -1,10 +1,10 @@
 import { h } from "preact";
 
-const TodoItem = ({ text }) => {
+const TodoItem = ({ text, onDelete }) => {
   return (
     <div>
       <span>{text}</span>
-      <button>Delete</button>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 };

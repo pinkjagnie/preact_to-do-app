@@ -23,6 +23,12 @@ class Main extends Component {
     console.log("adding " + newTodoText);
   };
 
+  deleteTodoHandler = (index) => {
+    const { todos } = this.state;
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    this.setState({ todos: updatedTodos });
+  };
+
   render() {
     const { todos, newTodoText } = this.state;
 
@@ -39,7 +45,10 @@ class Main extends Component {
           <h2>Things I have to do</h2>
           <div>
             {todos.map((todo, index) => (
-              <ToDoItem text={todo} />
+              <ToDoItem
+                text={todo}
+                onDelete={() => this.deleteTodoHandler(index)}
+              />
             ))}
           </div>
         </div>
