@@ -45,12 +45,16 @@ class Main extends Component {
         <div>
           <h2>Things I have to do</h2>
           <div>
-            {todos.map((todo, index) => (
-              <ToDoItem
-                text={todo}
-                onDelete={() => this.deleteTodoHandler(index)}
-              />
-            ))}
+            {todos.length === 0 ? (
+              <p>No tasks found</p>
+            ) : (
+              todos.map((todo, index) => (
+                <ToDoItem
+                  text={todo}
+                  onDelete={() => this.deleteTodoHandler(index)}
+                />
+              ))
+            )}
           </div>
         </div>
       </div>
