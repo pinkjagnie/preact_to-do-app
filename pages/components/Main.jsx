@@ -1,5 +1,6 @@
 import { h, Component } from "preact";
 
+import ToDoItem from "./ToDoItem";
 class Main extends Component {
   state = {
     todos: [],
@@ -16,7 +17,9 @@ class Main extends Component {
         <button>Add</button>
         <div>
           <h2>Things I have to do</h2>
-          <div>TBD: list of to dos</div>
+          <div>
+            <ToDoItem />
+          </div>
         </div>
       </div>
     );
