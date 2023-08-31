@@ -2,9 +2,11 @@ import { h } from "preact";
 
 const TodoItem = ({ text, onDelete }) => {
   return (
-    <div>
+    <div class="toDoItemWrapper">
       <span>{text}</span>
-      <button onClick={onDelete}>Delete</button>
+      <button onClick={onDelete} class="deleteButton">
+        Delete
+      </button>
     </div>
   );
 };

@@ -39,6 +39,7 @@ class Main extends Component {
           type="text"
           value={newTodoText}
           onChange={this.newTodoChangeHandler}
+          placeholder="What task for today?"
         />
         <button onClick={this.addTodoHandler}>Add</button>
         <div>
