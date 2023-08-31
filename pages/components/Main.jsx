@@ -15,8 +15,11 @@ class Main extends Component {
   addTodoHandler = () => {
     const { todos, newTodoText } = this.state;
     if (newTodoText) {
+      const updatedTodos = [...todos, newTodoText];
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
+
       this.setState({
-        todos: [...todos, newTodoText],
+        todos: updatedTodos,
         newTodoText: "",
       });
     }
@@ -28,6 +31,15 @@ class Main extends Component {
     const updatedTodos = todos.filter((_, i) => i !== index);
     this.setState({ todos: updatedTodos });
   };
+
+  componentDidMount() {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      this.setState({
+        todos: JSON.parse(savedTodos),
+      });
+    }
+  }
 
   render() {
     const { todos, newTodoText } = this.state;
