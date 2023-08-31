@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-const TodoItem = ({ text, onDelete }) => {
+const ToDoItem = ({ text, onDelete }) => {
   return (
     <div class="toDoItemWrapper">
       <span>{text}</span>
@@ -11,4 +11,4 @@ const TodoItem = ({ text, onDelete }) => {
   );
 };
 
-export default TodoItem;
+export default ToDoItem;
