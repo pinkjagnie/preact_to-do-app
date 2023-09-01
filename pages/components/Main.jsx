@@ -37,6 +37,18 @@ class Main extends Component {
     });
   };
 
+  editTodoItemHandler = (index, newText) => {
+    const { todos } = this.state;
+    const updatedTodos = [...todos];
+    updatedTodos[index] = newText;
+
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+
+    this.setState({
+      todos: updatedTodos,
+    });
+  };
+
   componentDidMount() {
     const savedTodos = localStorage.getItem("todos");
     if (savedTodos) {
@@ -69,6 +81,7 @@ class Main extends Component {
                 <ToDoItem
                   text={todo}
                   onDelete={() => this.deleteTodoHandler(index)}
+                  onEdit={(newText) => this.editTodoItemHandler(index, newText)}
                 />
               ))
             )}

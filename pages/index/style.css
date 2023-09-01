@@ -27,6 +27,24 @@ button {
   border-radius: 5px;
 }
 
+.editButton {
+  background: rgba(1, 1, 71, 0.4);
+  padding: 0.75rem 1.5rem;
+  margin-left: 0.3rem;
+  border-radius: 5px;
+}
+
+.editInput {
+  margin: 0 auto;
+}
+
+.saveButton {
+  background: rgba(1, 1, 71, 0.6);
+  padding: 0.75rem 1.5rem;
+  margin-left: 0.3rem;
+  border-radius: 5px;
+}
+
 .toDoItemWrapper {
   display: flex;
   justify-content: space-between;
