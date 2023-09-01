@@ -9,7 +9,6 @@ class Main extends Component {
 
   newTodoChangeHandler = (e) => {
     this.setState({ newTodoText: e.target.value });
-    console.log("klik");
   };
 
   addTodoHandler = () => {
@@ -23,7 +22,6 @@ class Main extends Component {
         newTodoText: "",
       });
     }
-    console.log("adding " + newTodoText);
   };
 
   deleteTodoHandler = (index) => {
